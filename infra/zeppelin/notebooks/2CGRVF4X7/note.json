@@ -1,29 +1,29 @@
 {
   "paragraphs": [
     {
-      "text": "import scala.collection.mutable\nimport org.apache.spark.sql.SparkSession\nimport org.apache.log4j.{ Level, Logger }\nimport net.sansa_stack.ml.spark.clustering.RDFByModularityClustering\n\nval graphFile \u003d \"hdfs://namenode:8020/data/Clustering_sampledata.nt\"\nval outputFile \u003d \"hdfs://namenode:8020/data/clustering.out\"\nval numIterations \u003d 10\n\nRDFByModularityClustering(sc, numIterations, graphFile, outputFile)",
+      "text": "%spark\nimport scala.collection.mutable\nimport org.apache.spark.sql.SparkSession\nimport org.apache.log4j.{ Level, Logger }\nimport net.sansa_stack.ml.spark.clustering.RDFByModularityClustering\n\nval graphFile \u003d \"hdfs://namenode:8020/data/Clustering_sampledata.nt\"\nval outputFile \u003d \"hdfs://namenode:8020/data/clustering.out\"\nval numIterations \u003d 10\n\nRDFByModularityClustering(sc, numIterations, graphFile, outputFile)",
       "user": "anonymous",
-      "dateUpdated": "Oct 27, 2017 2:06:21 AM",
+      "dateUpdated": "Nov 18, 2022 1:09:23 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
+          "language": "text",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/text"
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "\nimport scala.collection.mutable\n\nimport org.apache.spark.sql.SparkSession\n\nimport org.apache.log4j.{Level, Logger}\n\nimport net.sansa_stack.ml.spark.clustering.RDFByModularityClustering\n\ngraphFile: String \u003d hdfs://namenode:8020/data/Clustering_sampledata.nt\n\noutputFile: String \u003d hdfs://namenode:8020/data/clustering.out\n\nnumIterations: Int \u003d 10\nThe number of nodes in the knowledge graph is 8 and the number of edges is 13.\nThe first ten edges of the graph look like the following: \n(\u003chttp://twitter/user0\u003e,\u003chttp://twitter/user1\u003e)\n(\u003chttp://twitter/user0\u003e,\u003chttp://twitter/user2\u003e)\n(\u003chttp://twitter/user0\u003e,\u003chttp://twitter/user3\u003e)\n(\u003chttp://twitter/user1\u003e,\u003chttp://twitter/user2\u003e)\n(\u003chttp://twitter/user1\u003e,\u003chttp://twitter/user3\u003e)\n(\u003chttp://twitter/user1\u003e,\u003chttp://twitter/user6\u003e)\n(\u003chttp://twitter/user2\u003e,\u003chttp://twitter/user3\u003e)\n(\u003chttp://twitter/user3\u003e,\u003chttp://twitter/user4\u003e)\n(\u003chttp://twitter/user4\u003e,\u003chttp://twitter/user5\u003e)\n(\u003chttp://twitter/user5\u003e,\u003chttp://twitter/user6\u003e)\nStarting iteration\n\n1\n2\n3\n4\n5\n6\n7\nThe computed clusters are:\nCluster1  contains:\n\u003chttp://twitter/user4\u003e, \u003chttp://twitter/user5\u003e, \u003chttp://twitter/user7\u003e, \u003chttp://twitter/user6\u003e, \n\nCluster2  contains:\n\u003chttp://twitter/user0\u003e, \u003chttp://twitter/user2\u003e, \u003chttp://twitter/user1\u003e, \u003chttp://twitter/user3\u003e, \n\n"
+            "data": "\nimport scala.collection.mutable\n\nimport org.apache.spark.sql.SparkSession\n\nimport org.apache.log4j.{Level, Logger}\n\n\n\n\u003cconsole\u003e:28: error: object sansa_stack is not a member of package net\n       import net.sansa_stack.ml.spark.clustering.RDFByModularityClustering\n                  ^\n"
           }
         ]
       },
@@ -31,9 +31,9 @@
       "jobName": "paragraph_1494503254565_1530513202",
       "id": "20170511-114734_1804790867",
       "dateCreated": "May 11, 2017 11:47:34 AM",
-      "dateStarted": "Oct 27, 2017 1:46:48 AM",
-      "dateFinished": "Oct 27, 2017 1:46:53 AM",
-      "status": "FINISHED",
+      "dateStarted": "Nov 18, 2022 1:09:24 PM",
+      "dateFinished": "Nov 18, 2022 1:09:44 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
@@ -60,7 +60,7 @@
       "dateCreated": "May 11, 2017 11:49:11 AM",
       "dateStarted": "Oct 27, 2017 1:48:09 AM",
       "dateFinished": "Oct 27, 2017 1:46:59 AM",
-      "status": "RUNNING",
+      "status": "ABORT",
       "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
@@ -82,25 +82,26 @@
   "name": "Machine Learning",
   "id": "2CGRVF4X7",
   "angularObjects": {
-    "2CWKZJSA2:shared_process": [],
-    "2CY79CVJ7:shared_process": [],
-    "2CW1TXE3D:shared_process": [],
-    "2CWY59WEQ:shared_process": [],
-    "2CY8UKVRT:shared_process": [],
-    "2CWU2J515:shared_process": [],
-    "2CVFF8N4U:shared_process": [],
-    "2CW58TZG9:shared_process": [],
-    "2CYH18VR3:shared_process": [],
-    "2CWAH6S82:shared_process": [],
-    "2CWD9T36S:shared_process": [],
-    "2CXJA9YDP:shared_process": [],
-    "2CWMAJY61:shared_process": [],
-    "2CXDJFDPZ:shared_process": [],
-    "2CYH2MC4J:shared_process": [],
-    "2CYYHCVN8:shared_process": [],
-    "2CWRP4PP9:shared_process": [],
-    "2CXY62DPD:shared_process": [],
-    "2CY375FSZ:shared_process": []
+    "2HJ5VNEWF:shared_process": [],
+    "2HM54G9YK:shared_process": [],
+    "2HKFJVT89:shared_process": [],
+    "2HKFCXP8N:shared_process": [],
+    "2HJ6GM9F3:shared_process": [],
+    "2HJ24A819:shared_process": [],
+    "2HM4CAH6N:shared_process": [],
+    "2HJQZ9GWD:shared_process": [],
+    "2HMXZ12XV:shared_process": [],
+    "2HM3YRJWY:shared_process": [],
+    "2HMK5MBNB:shared_process": [],
+    "2HJQU21AG:shared_process": [],
+    "2HMTGNS8J:shared_process": [],
+    "2HJD6GVEE:shared_process": [],
+    "2HHR9RZEC:shared_process": [],
+    "2HMF54T78:shared_process": [],
+    "2HJ4P8ZHN:shared_process": [],
+    "2HHY663E4:shared_process": [],
+    "2HMWXH8BB:shared_process": [],
+    "2HHWEFATD:shared_process": []
   },
   "config": {},
   "info": {}
